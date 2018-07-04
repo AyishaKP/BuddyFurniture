@@ -1,0 +1,15 @@
+PODS:
+  - JTSImageViewController (1.5.1)
+  - ObjectMapper (3.3.0)
+
+DEPENDENCIES:
+  - JTSImageViewController
+  - ObjectMapper
+
+SPEC CHECKSUMS:
+  JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+
+PODFILE CHECKSUM: dc78b1f178551fccd72b2118c312366b3a29b3ec
+
+COCOAPODS: 1.2.0

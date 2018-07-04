@@ -1,0 +1,30 @@
+{
+    "status": "success",
+    "product_categories": [
+        {
+            "category_id": 1,
+            "category_name": "BedRoom Furnitures",
+            "category_image": "/Users/ayisha/Downloads/furniture.jpg"
+        },
+        {
+            "category_id": 2,
+            "category_name": "Kitchen Furnitures",
+            "category_image": "/Users/ayisha/Downloads/furniture.jpg"
+        },
+        {
+            "category_id": 3,
+            "category_name": "Office Furnitures",
+            "category_image": "/Users/ayisha/Downloads/furniture.jpg"
+        },
+        {
+            "category_id": 4,
+            "category_name": "Sofa Set",
+            "category_image": "/Users/ayisha/Downloads/furniture.jpg"
+        },
+        {
+            "category_id": 5,
+            "category_name": "Dining Table",
+            "category_image": "/Users/ayisha/Downloads/furniture.jpg"
+        }
+    ]
+}
