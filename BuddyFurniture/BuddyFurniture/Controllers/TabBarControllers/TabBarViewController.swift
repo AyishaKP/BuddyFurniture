@@ -13,13 +13,23 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let homeVC = StoryboardManager.shared.categoryStoryboard().instantiateInitialViewController()
-        let homeNavVC = UINavigationController(rootViewController: homeVC!)
-        let homeIcon = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_inactive"), selectedImage: UIImage(named: "ic_home_active"))
-        homeVC?.tabBarItem = homeIcon
-        let firstControllers = homeNavVC
+        let dashboardVC = StoryboardManager.shared.homeTabBar().instantiateViewController(withIdentifier: "HomeDashboardCVCID")
+        let dashboardNavVC = UINavigationController(rootViewController: dashboardVC)
+        let dashboardIcon = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_inactive"), selectedImage: UIImage(named: "ic_home_active"))
+        dashboardVC.tabBarItem = dashboardIcon
+        let firstControllers = dashboardNavVC
+        let homeVC = StoryboardManager.shared.productStoryboard().instantiateViewController(withIdentifier: "ParentProductVCID")
+        let homeNavVC = UINavigationController(rootViewController: homeVC)
+        let homeIcon = UITabBarItem(title: "Product", image: UIImage(named: "ic_home_inactive"), selectedImage: UIImage(named: "ic_home_active"))
+        homeVC.tabBarItem = homeIcon
+        let secondControllers = homeNavVC
+        let cartVC = StoryboardManager.shared.shoppingCartStoryboard().instantiateViewController(withIdentifier: "parentCartID")
+        let cartNavVC = UINavigationController(rootViewController: cartVC)
+        let cartIcon = UITabBarItem(title: "Cart", image: UIImage(named: "ic_cart_inactive"), selectedImage: UIImage(named: "ic_cart_active"))
+        cartVC.tabBarItem = cartIcon
+        let thirdControllers = cartNavVC
         
-        self.viewControllers = [firstControllers,firstControllers,firstControllers,firstControllers,firstControllers]
+        self.viewControllers = [firstControllers,secondControllers,thirdControllers,firstControllers,firstControllers]
         
         tabBar.barTintColor = UIColor.black
         tabBar.tintColor = UIColor.white

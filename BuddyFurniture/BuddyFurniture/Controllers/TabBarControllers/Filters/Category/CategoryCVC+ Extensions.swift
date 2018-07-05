@@ -36,7 +36,9 @@ extension CategoryCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let productVC = StoryboardManager.shared.productStoryboard().instantiateViewController(withIdentifier: "productCollectionID") as? ProductCollectionViewController else { return }
+        //guard let productVC = StoryboardManager.shared.productStoryboard().instantiateViewController(withIdentifier: "productCollectionID") as? ProductCollectionViewController else { return }
+        guard let productVC = StoryboardManager.shared.productStoryboard().instantiateViewController(withIdentifier: "ParentProductVCID") as? ParentProductVC else { return }
+        
         navigationController?.pushViewController(productVC, animated: true)
     }
 }

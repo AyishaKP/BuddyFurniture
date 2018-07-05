@@ -24,4 +24,12 @@ class StoryboardManager {
     func productStoryboard() -> UIStoryboard {
         return UIStoryboard(name: Constants.storyboardName.productsStoryboard, bundle: nil)
     }
+    func filterStoryboard() -> UIStoryboard {
+        return UIStoryboard(name: Constants.storyboardName.filterStoryboard, bundle: nil)
+    }
+    func shoppingCartStoryboard() -> UIStoryboard {
+        return UIStoryboard(name: Constants.storyboardName.shoppingCart, bundle: nil)
+    }
+    
+    
 }

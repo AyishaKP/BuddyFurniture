@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Bh-Wq-FF7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cL1-dv-9Zo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,28 +12,107 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
     </customFonts>
     <scenes>
+        <!--Parent ProductVC-->
+        <scene sceneID="nwb-cq-OJ9">
+            <objects>
+                <viewController storyboardIdentifier="ParentProductVCID" id="cL1-dv-9Zo" customClass="ParentProductVC" customModule="BuddyFurniture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R4Y-LT-dWe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6j-GJ-Imr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lxX-Yc-RiZ">
+                                        <rect key="frame" x="5" y="0.0" width="365" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yak-Ep-Pib">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="50"/>
+                                                <color key="backgroundColor" name="BrownThemeColor"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                <state key="normal" title="SORT">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapSort:" destination="cL1-dv-9Zo" eventType="touchUpInside" id="Y7F-v4-6IW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHY-he-nVU">
+                                                <rect key="frame" x="187.5" y="0.0" width="177.5" height="50"/>
+                                                <color key="backgroundColor" name="BrownThemeColor"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                <state key="normal" title="FILTER">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapFilter:" destination="cL1-dv-9Zo" eventType="touchUpInside" id="0Ev-71-bCu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lxX-Yc-RiZ" secondAttribute="bottom" id="0mm-Uo-8F3"/>
+                                    <constraint firstAttribute="height" constant="50" id="2Im-r7-HoW"/>
+                                    <constraint firstItem="lxX-Yc-RiZ" firstAttribute="top" secondItem="A6j-GJ-Imr" secondAttribute="top" id="Gp9-Qx-4EV"/>
+                                    <constraint firstItem="lxX-Yc-RiZ" firstAttribute="leading" secondItem="A6j-GJ-Imr" secondAttribute="leading" constant="5" id="uUV-l0-tzj"/>
+                                    <constraint firstAttribute="trailing" secondItem="lxX-Yc-RiZ" secondAttribute="trailing" constant="5" id="zoW-uh-DSY"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5J-9f-Dg2">
+                                <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                                <connections>
+                                    <segue destination="4Bh-Wq-FF7" kind="embed" id="1P9-pa-bl9"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b5J-9f-Dg2" firstAttribute="leading" secondItem="Ai1-Ao-RxU" secondAttribute="leading" id="9xM-bT-Q8s"/>
+                            <constraint firstItem="A6j-GJ-Imr" firstAttribute="trailing" secondItem="Ai1-Ao-RxU" secondAttribute="trailing" id="JUQ-Xn-aTj"/>
+                            <constraint firstItem="b5J-9f-Dg2" firstAttribute="bottom" secondItem="Ai1-Ao-RxU" secondAttribute="bottom" id="SWk-tg-43A"/>
+                            <constraint firstItem="A6j-GJ-Imr" firstAttribute="top" secondItem="R4Y-LT-dWe" secondAttribute="top" id="d5d-rC-0NZ"/>
+                            <constraint firstItem="b5J-9f-Dg2" firstAttribute="trailing" secondItem="Ai1-Ao-RxU" secondAttribute="trailing" id="gpK-d3-5n8"/>
+                            <constraint firstItem="b5J-9f-Dg2" firstAttribute="top" secondItem="A6j-GJ-Imr" secondAttribute="bottom" constant="2" id="ltc-CR-eKg"/>
+                            <constraint firstItem="A6j-GJ-Imr" firstAttribute="leading" secondItem="Ai1-Ao-RxU" secondAttribute="leading" id="zs3-lv-tvu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ai1-Ao-RxU"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="containerView" destination="b5J-9f-Dg2" id="cn7-Fi-Ap5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSU-qU-Y99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1333.5999999999999" y="-687.7061469265368"/>
+        </scene>
         <!--Product Collection View Controller-->
         <scene sceneID="fXM-wA-Pha">
             <objects>
                 <collectionViewController storyboardIdentifier="productCollectionID" id="4Bh-Wq-FF7" customClass="ProductCollectionViewController" customModule="BuddyFurniture" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DfC-sn-hsO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g8z-Gb-Kms">
                             <size key="itemSize" width="178" height="256"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="0.0" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="productCellID" id="f6M-er-Xb3" customClass="ProductListingCVCell" customModule="BuddyFurniture" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="178" height="256"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="productCellID" id="f6M-er-Xb3" customClass="ProductListingCVCell" customModule="BuddyFurniture" customModuleProvider="target">
+                                <rect key="frame" x="5" y="5" width="178" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="178" height="256"/>
@@ -46,7 +125,7 @@
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuT-XD-WV0">
-                                            <rect key="frame" x="0.0" y="184" width="178" height="72"/>
+                                            <rect key="frame" x="0.0" y="184" width="178" height="20"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-rr-hsh">
                                                     <rect key="frame" x="8" y="12" width="162" height="39"/>

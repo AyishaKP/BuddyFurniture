@@ -21,6 +21,11 @@
 		5A0AFE5C20EE7CD600FFF428 /* AccordionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AFE5B20EE7CD600FFF428 /* AccordionTableViewCell.swift */; };
 		5A0AFE5E20EE883A00FFF428 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AFE5D20EE883A00FFF428 /* Products.json */; };
 		5A0AFE6020EEB68100FFF428 /* ProductContentTVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AFE5F20EEB68100FFF428 /* ProductContentTVC+Extensions.swift */; };
+		5A0AFE6220EEBB5A00FFF428 /* ParentProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AFE6120EEBB5A00FFF428 /* ParentProductVC.swift */; };
+		5A0AFE6420EEC10500FFF428 /* ShoppingCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AFE6320EEC10500FFF428 /* ShoppingCart.storyboard */; };
+		5A0AFE6720EEC47300FFF428 /* ShoppingCartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AFE6620EEC47300FFF428 /* ShoppingCartTVC.swift */; };
+		5A0AFE6920EEC4B200FFF428 /* ParentCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AFE6820EEC4B200FFF428 /* ParentCartVC.swift */; };
+		5A0AFE6B20EEC50300FFF428 /* ShoppingListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AFE6A20EEC50300FFF428 /* ShoppingListTVCell.swift */; };
 		5A1EE80F20EE211B0028A667 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EE80820EE211B0028A667 /* Lato-Bold.ttf */; };
 		5A1EE81020EE211B0028A667 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EE80920EE211B0028A667 /* Lato-Black.ttf */; };
 		5A1EE81120EE211B0028A667 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A1EE80A20EE211B0028A667 /* Lato-Regular.ttf */; };
@@ -106,6 +111,11 @@
 		5A0AFE5B20EE7CD600FFF428 /* AccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccordionTableViewCell.swift; path = ../../../../../../Desktop/AccordionTableViewCell.swift; sourceTree = "<group>"; };
 		5A0AFE5D20EE883A00FFF428 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Products.json; path = ../../../../../../../Desktop/Products.json; sourceTree = "<group>"; };
 		5A0AFE5F20EEB68100FFF428 /* ProductContentTVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductContentTVC+Extensions.swift"; sourceTree = "<group>"; };
+		5A0AFE6120EEBB5A00FFF428 /* ParentProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentProductVC.swift; sourceTree = "<group>"; };
+		5A0AFE6320EEC10500FFF428 /* ShoppingCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingCart.storyboard; sourceTree = "<group>"; };
+		5A0AFE6620EEC47300FFF428 /* ShoppingCartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTVC.swift; sourceTree = "<group>"; };
+		5A0AFE6820EEC4B200FFF428 /* ParentCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCartVC.swift; sourceTree = "<group>"; };
+		5A0AFE6A20EEC50300FFF428 /* ShoppingListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTVCell.swift; sourceTree = "<group>"; };
 		5A1EE80820EE211B0028A667 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		5A1EE80920EE211B0028A667 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		5A1EE80A20EE211B0028A667 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -217,6 +227,16 @@
 			path = ProductDetails;
 			sourceTree = "<group>";
 		};
+		5A0AFE6520EEC43100FFF428 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AFE6320EEC10500FFF428 /* ShoppingCart.storyboard */,
+				5A0AFE6620EEC47300FFF428 /* ShoppingCartTVC.swift */,
+				5A0AFE6820EEC4B200FFF428 /* ParentCartVC.swift */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		5A1EE80720EE211B0028A667 /* LatoFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +269,7 @@
 				5A1EE82220EE33D00028A667 /* Product.storyboard */,
 				5A0AFE4220EE4E1400FFF428 /* ProductCollectionViewController+Extensions.swift */,
 				5A0AFE4420EE4E2D00FFF428 /* ProductCollectionViewController+Data.swift */,
+				5A0AFE6120EEBB5A00FFF428 /* ParentProductVC.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -353,6 +374,7 @@
 				5A99C8C120ED3520003EDAA2 /* CategoryCollectionViewCell.swift */,
 				5A1EE82420EE34B90028A667 /* ProductListingCVCell.swift */,
 				5A0AFE5920EE7BF300FFF428 /* ProductExpandTableViewCell.swift */,
+				5A0AFE6A20EEC50300FFF428 /* ShoppingListTVCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,6 +403,7 @@
 		5A94332F20ECFA46001B274F /* TabBarControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5A0AFE6520EEC43100FFF428 /* ShoppingCart */,
 				5A99C8C520ED6418003EDAA2 /* HomeDashboard */,
 				5A1EE81D20EE33700028A667 /* Product */,
 				5A99C8BE20ED347E003EDAA2 /* Filters */,
@@ -555,6 +578,7 @@
 				5A1EE81520EE211B0028A667 /* Lato-Medium.ttf in Resources */,
 				5A99C8C020ED34B0003EDAA2 /* Filters.storyboard in Resources */,
 				5A5AFC1520ECBEAF004D2F01 /* Assets.xcassets in Resources */,
+				5A0AFE6420EEC10500FFF428 /* ShoppingCart.storyboard in Resources */,
 				5A99C8BB20ED3392003EDAA2 /* Categories.json in Resources */,
 				5A0AFE5E20EE883A00FFF428 /* Products.json in Resources */,
 				5A5AFC4B20ECC65B004D2F01 /* Onboard.storyboard in Resources */,
@@ -745,14 +769,18 @@
 				5A5AFC0E20ECBEAF004D2F01 /* AppDelegate.swift in Sources */,
 				5A99C8C220ED3520003EDAA2 /* CategoryCollectionViewCell.swift in Sources */,
 				5A94332320ECDC57001B274F /* UIViewController+Extensions.swift in Sources */,
+				5A0AFE6920EEC4B200FFF428 /* ParentCartVC.swift in Sources */,
+				5A0AFE6220EEBB5A00FFF428 /* ParentProductVC.swift in Sources */,
 				5A0AFE5620EE763400FFF428 /* ProductDisplayContentVC.swift in Sources */,
 				5A1EE81920EE22430028A667 /* FilterPriceTableViewController.swift in Sources */,
 				5A0AFE4120EE4A4300FFF428 /* Products.swift in Sources */,
 				5A99C8C920ED671A003EDAA2 /* Category+Handler.swift in Sources */,
 				5A94332A20ECEE70001B274F /* OnboardViewController.swift in Sources */,
 				5A94332C20ECEE98001B274F /* PageViewVC.swift in Sources */,
+				5A0AFE6B20EEC50300FFF428 /* ShoppingListTVCell.swift in Sources */,
 				5A94332820ECEE3D001B274F /* DisplayOnboardVC.swift in Sources */,
 				5A94332620ECEE14001B274F /* ContentOnboardVC.swift in Sources */,
+				5A0AFE6720EEC47300FFF428 /* ShoppingCartTVC.swift in Sources */,
 				5A0AFE5220EE75F200FFF428 /* ProductContentTVC.swift in Sources */,
 				5A94333F20ED0604001B274F /* UIImage+Extensions.swift in Sources */,
 				5A99C8C420ED362C003EDAA2 /* CategoryCVC+ Extensions.swift in Sources */,

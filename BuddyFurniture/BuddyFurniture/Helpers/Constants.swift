@@ -14,9 +14,8 @@ struct Constants {
         static let homeTabBar = "HomeTabBar"
         static let categoryStoryBoard = "Filters"
         static let productsStoryboard = "Product"
-//        static let shoppingCart = "YTShoppingCartStoryboard"
-//        static let profileCart = "YTProfileStoryboard"
-//        static let productDetails = "YTProdcutDetailsStoryboard"
+        static let filterStoryboard = "Filters"
+        static let shoppingCart = "ShoppingCart"
         
     }
     
