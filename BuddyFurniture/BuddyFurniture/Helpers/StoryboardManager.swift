@@ -21,4 +21,7 @@ class StoryboardManager {
     func categoryStoryboard() -> UIStoryboard {
         return UIStoryboard(name: Constants.storyboardName.categoryStoryBoard, bundle: nil)
     }
+    func productStoryboard() -> UIStoryboard {
+        return UIStoryboard(name: Constants.storyboardName.productsStoryboard, bundle: nil)
+    }
 }

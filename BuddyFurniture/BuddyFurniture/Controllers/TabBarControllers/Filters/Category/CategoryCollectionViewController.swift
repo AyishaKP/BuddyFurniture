@@ -17,6 +17,7 @@ class CategoryCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         title = "Categories"
         navigationController?.navigationBar.isTranslucent = false
+        collectionView?.backgroundView = UIImageView(image: UIImage(named: "theme_background"))
         sendRequest()
         
     }

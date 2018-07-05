@@ -9,6 +9,7 @@ target 'BuddyFurniture' do
 
   pod 'ObjectMapper'
   pod 'JTSImageViewController'
+  pod 'BarcodeScanner'
 
   target 'BuddyFurnitureTests' do
     inherit! :search_paths

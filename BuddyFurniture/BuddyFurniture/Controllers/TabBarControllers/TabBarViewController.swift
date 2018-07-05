@@ -13,7 +13,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let homeVC = StoryboardManager.shared.categoryStoryboard().instantiateViewController(withIdentifier: "CategoryCVCID") as? CategoryCollectionViewController
+        let homeVC = StoryboardManager.shared.categoryStoryboard().instantiateInitialViewController()
         let homeNavVC = UINavigationController(rootViewController: homeVC!)
         let homeIcon = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_inactive"), selectedImage: UIImage(named: "ic_home_active"))
         homeVC?.tabBarItem = homeIcon
