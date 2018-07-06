@@ -35,7 +35,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dyb-Oe-j88">
                                 <rect key="frame" x="10" y="613" width="355" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-K5-UAb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-K5-UAb" customClass="FlatButton" customModule="Material">
                                         <rect key="frame" x="0.0" y="0.0" width="172.5" height="44"/>
                                         <color key="backgroundColor" name="BrownThemeColor"/>
                                         <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
@@ -44,7 +44,7 @@
                                             <action selector="btnCancelPressed:" destination="a6W-Oh-PR0" eventType="touchUpInside" id="VJP-lg-ySo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjh-aA-wJr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjh-aA-wJr" customClass="FlatButton" customModule="Material">
                                         <rect key="frame" x="182.5" y="0.0" width="172.5" height="44"/>
                                         <color key="backgroundColor" name="BrownThemeColor"/>
                                         <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
@@ -61,7 +61,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uBw-E5-5A7">
                                 <rect key="frame" x="0.0" y="10" width="150" height="593"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhc-CN-OnL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhc-CN-OnL" customClass="FlatButton" customModule="Material">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
                                         <color key="backgroundColor" name="BrownThemeColor"/>
                                         <constraints>
@@ -73,7 +73,7 @@
                                             <action selector="btnCategoryPressed:" destination="a6W-Oh-PR0" eventType="touchUpInside" id="eZW-gn-sqh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myv-P0-lxy">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myv-P0-lxy" customClass="FlatButton" customModule="Material">
                                         <rect key="frame" x="0.0" y="54" width="150" height="44"/>
                                         <color key="backgroundColor" name="BrownThemeColor"/>
                                         <constraints>

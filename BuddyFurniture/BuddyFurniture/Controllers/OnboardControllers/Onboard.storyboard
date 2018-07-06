@@ -83,7 +83,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Be2-QR-OL9" secondAttribute="bottom" constant="10" id="qdp-66-5oW"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-nY-YaH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-nY-YaH" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="0.0" y="608.5" width="375" height="58.5"/>
                                 <color key="backgroundColor" name="BrownThemeColor"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>

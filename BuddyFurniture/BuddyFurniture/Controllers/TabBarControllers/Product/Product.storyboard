@@ -34,7 +34,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lxX-Yc-RiZ">
                                         <rect key="frame" x="5" y="0.0" width="365" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yak-Ep-Pib">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yak-Ep-Pib" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="0.0" y="0.0" width="177.5" height="50"/>
                                                 <color key="backgroundColor" name="BrownThemeColor"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
@@ -45,7 +45,7 @@
                                                     <action selector="didTapSort:" destination="cL1-dv-9Zo" eventType="touchUpInside" id="Y7F-v4-6IW"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHY-he-nVU">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHY-he-nVU" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="187.5" y="0.0" width="177.5" height="50"/>
                                                 <color key="backgroundColor" name="BrownThemeColor"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
@@ -366,7 +366,7 @@
                                             <constraint firstAttribute="width" constant="116" id="vcK-6w-hbM"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjT-jd-kaT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjT-jd-kaT" customClass="FlatButton" customModule="Material">
                                         <rect key="frame" x="118" y="0.0" width="257" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="ADD TO CART">

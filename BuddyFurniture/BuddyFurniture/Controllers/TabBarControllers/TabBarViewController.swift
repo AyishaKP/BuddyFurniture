@@ -20,7 +20,7 @@ class TabBarViewController: UITabBarController {
         let firstControllers = dashboardNavVC
         let homeVC = StoryboardManager.shared.productStoryboard().instantiateViewController(withIdentifier: "ParentProductVCID")
         let homeNavVC = UINavigationController(rootViewController: homeVC)
-        let homeIcon = UITabBarItem(title: "Product", image: UIImage(named: "ic_home_inactive"), selectedImage: UIImage(named: "ic_home_active"))
+        let homeIcon = UITabBarItem(title: "Product", image: UIImage(named: "ic_products_inactive"), selectedImage: UIImage(named: "ic_products_active"))
         homeVC.tabBarItem = homeIcon
         let secondControllers = homeNavVC
         let cartVC = StoryboardManager.shared.shoppingCartStoryboard().instantiateViewController(withIdentifier: "parentCartID")
