@@ -12,9 +12,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
         <array key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
         </array>
@@ -51,6 +48,8 @@
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" name="BackgroundColor"/>
+                                        <size key="shadowOffset" width="-1" height="-2"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3K-iO-ia6">
                                         <rect key="frame" x="162.5" y="60.5" width="50" height="3"/>
@@ -62,25 +61,16 @@
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Giving your home/office a makeover has never been easier! Let's make it easier and your Buddy Furnitures will help you!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-QR-OL9">
                                         <rect key="frame" x="10" y="82" width="355" height="88"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.29745291095890414" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="88" id="YHZ-l6-0hD"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                        </variation>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.067000001668930054" green="0.067000001668930054" blue="0.082000002264976501" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Mw5-L4-HEc" firstAttribute="top" secondItem="CKA-vl-Qhw" secondAttribute="top" constant="20.5" id="CQg-tq-vbq"/>
                                     <constraint firstAttribute="height" constant="180" id="Jmk-TE-pdM"/>
@@ -215,6 +205,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.067000001668930054" green="0.067000001668930054" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrownThemeColor">
             <color red="0.2199999988079071" green="0.13699999451637268" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

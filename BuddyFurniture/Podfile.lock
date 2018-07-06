@@ -1,6 +1,14 @@
 PODS:
   - BarcodeScanner (4.1.3)
+  - FTPopOverMenu_Swift (0.0.9)
   - JTSImageViewController (1.5.1)
+  - Material (2.15.0):
+    - Material/Core (= 2.15.0)
+  - Material/Core (2.15.0):
+    - Motion (~> 1.3.0)
+  - Motion (1.3.5):
+    - Motion/Core (= 1.3.5)
+  - Motion/Core (1.3.5)
   - ObjectMapper (3.3.0)
   - Realm (3.7.4):
     - Realm/Headers (= 3.7.4)
@@ -10,17 +18,22 @@ PODS:
 
 DEPENDENCIES:
   - BarcodeScanner
+  - FTPopOverMenu_Swift (~> 0.0.6)
   - JTSImageViewController
+  - Material
   - ObjectMapper
   - RealmSwift
 
 SPEC CHECKSUMS:
   BarcodeScanner: fce1ad2b3f28286b1ab5091fe0979789618bee27
+  FTPopOverMenu_Swift: 3c1c01a5005a06230ea4b7b9f4a96300f5748bd7
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
+  Material: 00e32bb5e61b3f749044897b2d93acd8bf33faa4
+  Motion: 9f74d115d7f72bb5380a8e3cde2f8a1fc898ac36
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Realm: a469bb59e33f9926102ccaea4349822c53b9117e
   RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
 
-PODFILE CHECKSUM: 391efd9ffbb212f5fe75bd60383716db1b924bdb
+PODFILE CHECKSUM: d5e5a6fe7c58500baa58c8f6f0ca73a2499b4316
 
 COCOAPODS: 1.2.0

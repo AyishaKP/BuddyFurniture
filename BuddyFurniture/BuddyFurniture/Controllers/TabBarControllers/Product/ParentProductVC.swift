@@ -7,27 +7,51 @@
 //
 
 import UIKit
-import BarcodeScanner
+import FTPopOverMenu_Swift
 
 class ParentProductVC: UIViewController {
-
+    
+    @IBOutlet weak var sortButton: UIButton!
     @IBOutlet weak var containerView: UIView!
+    
+    var selectedCategory: Category?
+    var priceRange: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        title = "PRODUCTS"
+        (self.childViewControllers.first as? ProductCollectionViewController)?.selectedCategory = selectedCategory
+        
+        (self.childViewControllers.first as? ProductCollectionViewController)?.filterProductsIfNeeded()
     }
 
     @IBAction func didTapSort(_ sender: UIButton) {
-        let viewController = BarcodeScannerViewController()
-        viewController.codeDelegate = self
-        viewController.errorDelegate = self
-        viewController.dismissalDelegate = self
-        
-        present(viewController, animated: true, completion: nil)
+
+        FTPopOverMenu.showForSender(sender: sender,
+                                    with: ["Low to High", "High to Low"],
+                                    done: { (selectedIndex) -> () in
+                                        var products: [Product] = (self.childViewControllers.first as? ProductCollectionViewController)?.products ?? []
+                                                switch selectedIndex {
+                                                case 0:
+                                                    products.sort(by: { $0.productRate < $1.productRate })
+                                                case 1:
+                                                    products.sort(by: { $0.productRate > $1.productRate })
+                                                default:
+                                                    break
+                                                }
+                                        
+                                        (self.childViewControllers.first as? ProductCollectionViewController)?.products = products
+                                        
+        }) {
+            
+        }
     }
+  
     
     @IBAction func didTapFilter(_ sender: UIButton) {
-        let filterVC = StoryboardManager.shared.categoryStoryboard().instantiateInitialViewController()
+        let filterVC = StoryboardManager.shared.categoryStoryboard().instantiateInitialViewController() as? FilterViewController
+        filterVC?.delegate = self
         navigationController?.pushViewController(filterVC!, animated: true)
     }
     override func didReceiveMemoryWarning() {
@@ -35,33 +59,15 @@ class ParentProductVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-extension ParentProductVC: BarcodeScannerCodeDelegate {
-    func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
-        controller.dismiss(animated: true, completion: nil)
-    }
+
+extension ParentProductVC: FilterDelegate {
     
-    
-    func barcodeScanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
-        print(code)
-        controller.reset()
-    }
-}
-extension ParentProductVC: BarcodeScannerDismissalDelegate {
-    func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
-    func barcodeScannerDidDismiss(_ controller: BarcodeScannerViewController) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-}
-extension ParentProductVC: BarcodeScannerErrorDelegate {
-    func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
-        print(error)
-    }
-    
-    func barcodeScanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
-        print(error)
+    func didSelect(category: Category?, price: Int?) {
+        
+        selectedCategory = category
+        (self.childViewControllers.first as? ProductCollectionViewController)?.selectedCategory = selectedCategory
+        (self.childViewControllers.first as? ProductCollectionViewController)?.priceRange = price
+        (self.childViewControllers.first as? ProductCollectionViewController)?.filterProductsIfNeeded()
     }
 }
 

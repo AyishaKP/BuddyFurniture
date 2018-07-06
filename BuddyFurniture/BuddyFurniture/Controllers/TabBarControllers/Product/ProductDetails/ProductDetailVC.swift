@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Material
 
 class ProductDetailVC: UIViewController {
 
@@ -20,6 +21,7 @@ class ProductDetailVC: UIViewController {
     
     var arrayQuantities:[String] = []
     var product: Product?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,9 +63,9 @@ class ProductDetailVC: UIViewController {
                 product.quantity = Int(quantityLabel.text!)!
                 realm.add(product, update: true)
             }
+            showAlert(message: "Product Added to your cart", title: "", okAction: nil)
         }
     }
-    
     @IBAction func didTapDone(_ sender: UIButton) {
         
         UIView.animateKeyframes(withDuration: 0.2, delay: 0.2, options: .beginFromCurrentState, animations: {
@@ -101,3 +103,4 @@ extension ProductDetailVC: UIPickerViewDataSource,UIPickerViewDelegate {
         quantityLabel.text = arrayQuantities[row]
     }
 }
+

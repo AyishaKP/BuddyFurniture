@@ -34,7 +34,7 @@ class ProductContentTVC: AccordionTableViewController {
         guard let product = product else { return }
         productName.text = product.productName
         brandName.text = "Brand: \(String(describing: product.brandName!))"
-        priceLabel.text = "\(product.productRate)"
+        priceLabel.text = "Price: \(product.productRate)"
         
         if let childVC = self.childViewControllers[ProductDetailChild.productDisplay.rawValue] as? ProductDisplayVC {
             childVC.product = product

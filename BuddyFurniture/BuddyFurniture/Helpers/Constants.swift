@@ -16,7 +16,6 @@ struct Constants {
         static let productsStoryboard = "Product"
         static let filterStoryboard = "Filters"
         static let shoppingCart = "ShoppingCart"
-        
     }
     
     struct segueId {

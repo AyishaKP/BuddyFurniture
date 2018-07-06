@@ -8,16 +8,23 @@
 
 import UIKit
 
+protocol CategorySelection {
+    func didSelect(category: Category)
+}
+
 private let reuseIdentifier = "CategorieCell"
 
 class CategoryCollectionViewController: UICollectionViewController {
 
     var categories: [Category] = []
+    var delegate: CategorySelection?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Categories"
         navigationController?.navigationBar.isTranslucent = false
-        collectionView?.backgroundView = UIImageView(image: UIImage(named: "theme_background"))
+        collectionView?.allowsMultipleSelection = true
+//        collectionView?.backgroundView = UIImageView(image: UIImage(named: "theme_background"))
         sendRequest()
         
     }

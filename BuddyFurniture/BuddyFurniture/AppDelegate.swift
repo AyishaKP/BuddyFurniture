@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, OnboardProtocol {
         if let onBoardController = window?.rootViewController as? OnboardViewController {
             onBoardController.onboardDelegate = self
         }
-        
+        ThemeManager.shared.customizeAppearance()
         return true
     }
 

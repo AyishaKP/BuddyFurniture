@@ -48,20 +48,13 @@ class ShoppingCartTVC: UITableViewController {
 
         let product = cartItems[indexPath.row]
         
-//        @IBOutlet weak var productImage: UIImageView!
-//
-//        @IBOutlet weak var titleArray: UILabel!
-//        @IBOutlet weak var productRateLabel: UILabel!
-//        @IBOutlet weak var plusButton: UIButton!
-//        @IBOutlet weak var countLabel: UILabel!
-//        @IBOutlet weak var minusButton: UIButton!
-//        @IBOutlet weak var mainView: UIView!
-        
-        cell?.productImage.image = UIImage(named: product.productImage!)
         cell?.titleLabel.text = product.productName
         cell?.productRateLabel.text = "Price: \(product.productRate)"
         cell?.countLabel.text = "\(product.quantity)"
-        
+        cell?.productImage.image = UIImage(named: product.productImage!)
+        cell?.productImage.layer.cornerRadius = 10
+        cell?.productImage.layer.masksToBounds = true
+
         return cell!
     }
 }

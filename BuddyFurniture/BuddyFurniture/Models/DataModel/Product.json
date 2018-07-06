@@ -1,0 +1,69 @@
+{
+    "status": "success",
+    "products": [
+        {
+            "product_id": 7,
+            "category_id": 1,
+            "product_name": "Wooden Chair",
+            "productRate": 500,
+            "product_description": "Stafford Solid wood bar stool in honey oak by amberville",
+            "productImage": "bedSet",
+            "quantity": 10,
+            "brandName": "Rabco"
+
+        },
+        {
+            "product_id": 6,
+            "category_id": 1,
+            "product_name": "Glass Table",
+            "productRate": 8000,
+            "product_description": "Solid Glass bar stool in honey oak by amberville",
+            "productImage": "furniture_BG",
+            "quantity": 10,
+            "brandName": "Rabco"
+                 
+        },
+        {
+            "product_id": 8,
+            "category_id": 2,
+            "product_name": "BedSide Table",
+            "productRate": 3000,
+            "product_description": "Shinju bedside table",
+            "productImage": "diwan",
+            "quantity": 10,
+            "brandName": "Rabco"
+
+
+        },
+        {
+            "product_id": 9,
+            "category_id": 3,
+            "product_name": "Drawers",
+            "productRate": 700,
+            "product_description": "Atlast chest of three drawers",
+            "productImage": "tvSet",
+            "quantity": 10,
+            "brandName": "Wooden"
+        },
+        {
+            "product_id": 10,
+            "category_id": 4,
+            "product_name": "TV unit",
+            "productRate": 20000,
+            "product_description": "Aoko TV unit in yellow ",
+            "productImage": "bedroomMirror",
+            "quantity": 10,
+            "brandName": "Wooden"
+        },
+        {
+            "product_id": 11,
+            "category_id": 5,
+            "product_name": "Bedcoat",
+            "productRate": 4000,
+            "product_description": "Three foldable bedcoat with storage space",
+            "productImage": "sofa",
+            "quantity": 10,
+            "brandName": "Rabco"
+        }
+    ]
+}

@@ -8,12 +8,14 @@
 
 import UIKit
 
-protocol SelectedPrices {
-    func didSelect(prices: [String])
+protocol SelectedPriceDelegate {
+    func didSelect(price: Int)
 }
 
 class FilterPriceTableViewController: UITableViewController {
 
+    var delegate: SelectedPriceDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,6 +26,18 @@ class FilterPriceTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelect(price: indexPath.row)
         
+        for indexP in tableView.indexPathsForSelectedRows! {
+            let cell = tableView.cellForRow(at: indexP)
+            cell?.backgroundColor = UIColor.clear
+        }
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.lightGray
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.clear
     }
 }

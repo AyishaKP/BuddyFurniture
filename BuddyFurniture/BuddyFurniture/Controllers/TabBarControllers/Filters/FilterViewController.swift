@@ -8,15 +8,24 @@
 
 import UIKit
 
+protocol FilterDelegate {
+    func didSelect(category: Category?, price: Int?)
+}
+
 class FilterViewController: UIViewController {
 
     @IBOutlet weak var rootContainerView: UIView!
     
     var contentViewController: UIViewController?
     
+    var selectedCategory: Category?
+    var selectedPrice: Int?
+
+    var delegate: FilterDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "FILTER"
         showCategory()
     }
     
@@ -42,21 +51,25 @@ class FilterViewController: UIViewController {
     
     
     @IBAction func btnCancelPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func btnApplyPressed(_ sender: UIButton) {
-        
+        delegate?.didSelect(category: selectedCategory, price: selectedPrice)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func showCategory() {
         
         guard let catVC = StoryboardManager.shared.categoryStoryboard().instantiateViewController(withIdentifier: "CategoryCVCID") as? CategoryCollectionViewController else { return }
+        catVC.delegate = self
         updateContentViewController(newContentViewController: catVC)
     }
     
     func showPrice() {
         
         guard let priceVC = StoryboardManager.shared.categoryStoryboard().instantiateViewController(withIdentifier: "PriceVCID") as? FilterPriceTableViewController else { return }
+        priceVC.delegate = self
         updateContentViewController(newContentViewController: priceVC)
     }
     
@@ -102,5 +115,19 @@ class FilterViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+extension FilterViewController: CategorySelection {
+    
+    func didSelect(category: Category) {
+        selectedCategory = category
+    }
+}
+
+extension FilterViewController: SelectedPriceDelegate {
+    
+    func didSelect(price: Int) {
+        selectedPrice = price
     }
 }

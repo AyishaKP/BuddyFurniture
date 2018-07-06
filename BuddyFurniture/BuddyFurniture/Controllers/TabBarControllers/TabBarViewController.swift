@@ -28,15 +28,20 @@ class TabBarViewController: UITabBarController {
         let cartIcon = UITabBarItem(title: "Cart", image: UIImage(named: "ic_cart_inactive"), selectedImage: UIImage(named: "ic_cart_active"))
         cartVC.tabBarItem = cartIcon
         let thirdControllers = cartNavVC
+        let searchVC = StoryboardManager.shared.homeTabBar().instantiateViewController(withIdentifier: "SearchVCID")
+        let searchNavVC = UINavigationController(rootViewController: searchVC)
+        let searchIcon = UITabBarItem(title: "Search", image: UIImage(named: "ic_searche_inactive"), selectedImage: UIImage(named: "ic_search_active"))
+        searchVC.tabBarItem = searchIcon
+        let fourthControllers = searchNavVC
         
-        self.viewControllers = [firstControllers,secondControllers,thirdControllers,firstControllers,firstControllers]
+        self.viewControllers = [firstControllers,secondControllers,thirdControllers,fourthControllers]
         
-        tabBar.barTintColor = UIColor.black
+        tabBar.barTintColor =  UIColor(named: "BrownThemeColor")!
         tabBar.tintColor = UIColor.white
         //tabBar.selectedItem?.badgeColor = UIColor.appPurple()
         let numberOfItems = CGFloat(tabBar.items!.count)
         let tabBarItemSize = CGSize(width: tabBar.frame.width / numberOfItems, height: tabBar.frame.height)
-        tabBar.selectionIndicatorImage = UIImage.imageWithColor(color: UIColor.brown, size: tabBarItemSize).resizableImage(withCapInsets:.zero)
+        tabBar.selectionIndicatorImage = UIImage.imageWithColor(color: UIColor.transparentBlack, size: tabBarItemSize).resizableImage(withCapInsets:.zero)
         // remove default border
         tabBar.frame.size.width = self.view.frame.width + 4
         tabBar.frame.origin.x = -2
