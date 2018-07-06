@@ -37,36 +37,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1q0-EC-rW4">
-                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xmw-2P-ZgZ">
-                                    <size key="itemSize" width="159" height="161"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="vtX-6W-iQS">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="161"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="159" height="161"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-JD-h20">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-JD-h20">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <segue destination="ejW-Cc-2tr" kind="embed" id="Zpt-H9-ssx"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CgS-Uj-u2Z" firstAttribute="top" secondItem="wNI-JD-h20" secondAttribute="bottom" id="42C-nH-64Z"/>
+                            <constraint firstItem="wNI-JD-h20" firstAttribute="leading" secondItem="XPq-7Q-oKM" secondAttribute="leading" id="Lmo-Hi-VRw"/>
+                            <constraint firstItem="wNI-JD-h20" firstAttribute="trailing" secondItem="XPq-7Q-oKM" secondAttribute="trailing" id="cbO-86-Thd"/>
+                            <constraint firstItem="wNI-JD-h20" firstAttribute="top" secondItem="KDf-Aa-OTg" secondAttribute="top" id="t8b-PJ-zbx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XPq-7Q-oKM"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -85,17 +69,17 @@
                         <viewControllerLayoutGuide type="bottom" id="H0b-77-X07"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tdE-YN-nLN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-ff-mj8">
-                                <rect key="frame" x="0.0" y="-20" width="375" height="227"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <segue destination="G6p-tD-pBp" kind="embed" id="Wt3-p8-W4i"/>
                                 </connections>
                             </containerView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vSt-p2-MN3">
-                                <rect key="frame" x="142.5" y="155" width="91" height="37"/>
+                                <rect key="frame" x="142.5" y="615" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="J5s-wm-mrt"/>
                                     <constraint firstAttribute="width" constant="91" id="pqk-uu-sZt"/>
@@ -141,8 +125,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cow-GT-0eV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cow-GT-0eV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.2199999988079071" green="0.13699999451637268" blue="0.10599999874830246" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

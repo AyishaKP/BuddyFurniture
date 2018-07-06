@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import ObjectMapper
+import RealmSwift
 
 extension CategoryCollectionViewController {
     

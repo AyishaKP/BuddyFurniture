@@ -8,7 +8,7 @@
 
 import Foundation
 import ObjectMapper
-
+import RealmSwift
 /**
  - This mappable model is used to map the json
  with category result to parse the list of categories.
@@ -16,12 +16,12 @@ import ObjectMapper
  - **IMPORTANT**: This model is created to map response
  that comes in application/json format from the server.
  */
-class Category: Mappable {
+class Category: Object, Mappable {
     
     /// Parameters for a category.
-    var categoryId: Int = 0
-    var categoryName: String?
-    var categoryImage: String?
+    @objc dynamic var categoryId: Int = 0
+    @objc dynamic var categoryName: String = ""
+    @objc dynamic var categoryImage: String = ""
     
     required convenience init?(map: Map) {
         self.init()

@@ -16,7 +16,7 @@ class HomeBannerViewController: UIViewController, UIPageViewControllerDataSource
     
     var timer : Timer?
     private var pendingIndex: Int?
-    let pageImages = [UIImage(named: "bedroomMirror"), UIImage(named: "diwan"), UIImage(named: "sofa"), UIImage(named: "tvSet")]
+    let pageImages = [UIImage(named: "sale1"), UIImage(named: "sale2"), UIImage(named: "sale3"), UIImage(named: "sale4"), UIImage(named: "sale5")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,7 +12,7 @@ private let reuseIdentifier = "productCellID"
 
 class ProductCollectionViewController: UICollectionViewController {
 
-    var products: [Products] = []
+    var products: [Product] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         sendRequest()

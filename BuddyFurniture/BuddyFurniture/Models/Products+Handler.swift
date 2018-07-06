@@ -1,5 +1,5 @@
 //
-//  Products+Handler.swift
+//  Product+Handler.swift
 //  BuddyFurniture
 //
 //  Created by Ayisha on 05/07/18.
@@ -20,7 +20,7 @@ class ProductsHandler: Mappable {
     
     var message: String?
     var status: Bool = false
-    var products: [Products]?
+    var products: [Product]?
     
     /**
      - This function can be used to validate JSON prior to mapping.

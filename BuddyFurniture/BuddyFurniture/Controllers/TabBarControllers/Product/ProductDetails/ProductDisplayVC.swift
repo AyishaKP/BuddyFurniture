@@ -16,7 +16,7 @@ class ProductDisplayVC: UIViewController {
     private var timer : Timer?
     private var pendingIndex: Int?
     var pageImages : [String] = []
-    var product: Products? {
+    var product: Product? {
         didSet {
             customize()
         }

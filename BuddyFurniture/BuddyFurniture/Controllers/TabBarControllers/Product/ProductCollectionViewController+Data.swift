@@ -12,7 +12,7 @@ extension ProductCollectionViewController {
     
     func sendRequest() {
         products.removeAll()
-    if let path = Bundle.main.path(forResource: "Products", ofType: "json") {
+    if let path = Bundle.main.path(forResource: "Product", ofType: "json") {
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)

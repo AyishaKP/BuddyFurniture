@@ -1,5 +1,5 @@
 //
-//  Products.swift
+//  Product.swift
 //  BuddyFurniture
 //
 //  Created by Ayisha on 05/07/18.
@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
 /**
  - This mappable model is used to map the json
@@ -15,17 +16,17 @@ import ObjectMapper
  - **IMPORTANT**: This model is created to map response
  that comes in application/json format from the server.
  */
-class Products: Mappable {
+class Product: Object, Mappable {
     
     /// Parameters for a movie.
-    var categoryId: Int = 0
-    var productId: Int = 0
-    var productName: String?
-    var productRating: Int = 0
-    var productDescription: String?
-    var productImage: String?
-    var quantity: Int = 0
-    var brandName: String?
+    @objc dynamic var categoryId: Int = 0
+    @objc dynamic var productId: Int = 0
+    @objc dynamic var productName: String?
+    @objc dynamic var productRate: Int = 0
+    @objc dynamic var productDescription: String?
+    @objc dynamic var productImage: String?
+    @objc dynamic var quantity: Int = 0
+    @objc dynamic var brandName: String?
     
     /// Parameters for a movie.
     required convenience init?(map: Map) {
@@ -41,7 +42,7 @@ class Products: Mappable {
         categoryId <- map["category_id"]
         productId <- map["product_id"]
         productName <- map["product_name"]
-        productRating <- map["product_rating"]
+        productRate <- map["productRate"]
         productDescription <- map["product_description"]
         productImage <- map["productImage"]
         quantity <- map["quantity"]
@@ -49,8 +50,8 @@ class Products: Mappable {
     }
     
     /// Used primary key to make the movie unique.
-    static func primaryKey() -> String? {
-        return "movieId"
+    override static func primaryKey() -> String? {
+        return "productId"
     }
 }
 

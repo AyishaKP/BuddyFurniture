@@ -269,7 +269,7 @@
                                     <outlet property="plusButton" destination="YfO-Rd-U1U" id="f9W-dl-SFg"/>
                                     <outlet property="productImage" destination="Ks2-Qv-gI4" id="9Xw-hG-ed5"/>
                                     <outlet property="productRateLabel" destination="7tc-MU-Diz" id="hGe-Df-h3s"/>
-                                    <outlet property="titleArray" destination="9cF-kD-PPg" id="AdQ-H5-3H9"/>
+                                    <outlet property="titleLabel" destination="9cF-kD-PPg" id="ztX-UN-6hC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

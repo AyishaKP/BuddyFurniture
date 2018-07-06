@@ -20,7 +20,7 @@ class ProductContentTVC: AccordionTableViewController {
     
     var arrayTitle :[String] = ["Description"]
     
-    var product: Products? {
+    var product: Product? {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 guard let weakSelf = self else { return }
@@ -34,7 +34,7 @@ class ProductContentTVC: AccordionTableViewController {
         guard let product = product else { return }
         productName.text = product.productName
         brandName.text = "Brand: \(String(describing: product.brandName!))"
-        priceLabel.text = "\(product.productRating)"
+        priceLabel.text = "\(product.productRate)"
         
         if let childVC = self.childViewControllers[ProductDetailChild.productDisplay.rawValue] as? ProductDisplayVC {
             childVC.product = product

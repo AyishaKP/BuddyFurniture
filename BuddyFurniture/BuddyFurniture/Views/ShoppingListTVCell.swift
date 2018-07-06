@@ -9,20 +9,20 @@
 import UIKit
 
 protocol shoppingCartProtocol {
-    func didTapAddButton(senderCell:ShoppingListTVCell, sender:UIButton, product: Products)
-    func didTapSubtractButton(senderCell:ShoppingListTVCell, sender:UIButton, product: Products)
+    func didTapAddButton(senderCell:ShoppingListTVCell, sender:UIButton, product: Product)
+    func didTapSubtractButton(senderCell:ShoppingListTVCell, sender:UIButton, product: Product)
 }
 class ShoppingListTVCell: UITableViewCell {
     @IBOutlet weak var productImage: UIImageView!
     
-    @IBOutlet weak var titleArray: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var productRateLabel: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var mainView: UIView!
     var shoppingDelegate : shoppingCartProtocol?
-    var product: Products? {
+    var product: Product? {
         didSet {
             self.productCount = product?.quantity ?? 0
             // self.productRateLabel.text = product?.price ?? ""

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ProductDetailVC: UIViewController {
 
@@ -18,7 +19,7 @@ class ProductDetailVC: UIViewController {
     var cartButton: UIBarButtonItem?
     
     var arrayQuantities:[String] = []
-    var product: Products?
+    var product: Product?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,23 +37,31 @@ class ProductDetailVC: UIViewController {
             if let childVC = weakSelf.childViewControllers.first as? ProductContentTVC {
                 childVC.product = product
             }
-            for i in stride(from: 1, to: product.quantity, by: 1) {
-                weakSelf.arrayQuantities.append(String(i))
-            }
+            weakSelf.arrayQuantities = (1...weakSelf.product!.quantity).map { "\($0)" }
             weakSelf.quantityPickerView.reloadAllComponents()
             weakSelf.quantityLabel.text  = product.quantity > 0 ? "1" : "0"
             
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func didTapQuanty(_ sender: UIButton) {
         guard let product = product else { return }
         viewForPicker.isHidden = product.quantity == 0
     }
+    
     @IBAction func didTapAddToCart(_ sender: UIButton) {
+        let realm = try! Realm()
+        if let product = product {
+            try! realm.write {
+                product.quantity = Int(quantityLabel.text!)!
+                realm.add(product, update: true)
+            }
+        }
     }
     
     @IBAction func didTapDone(_ sender: UIButton) {
@@ -89,6 +98,6 @@ extension ProductDetailVC: UIPickerViewDataSource,UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        quantityLabel.text = arrayQuantities[row]
     }
 }
